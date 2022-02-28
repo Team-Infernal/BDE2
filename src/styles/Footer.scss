@@ -1,0 +1,43 @@
+@import "./variables";
+
+#footer {
+	min-height: 20vh;
+	padding: 50px;
+	background-color: $dark_bg;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	font-size: 2rem;
+	color: $light_bg;
+
+	&-logos {
+		grid-column: 2 / span 3;
+		text-align: center;
+
+		> * {
+			margin: 0 10px;
+			padding: 10px;
+			border: 2px solid $light_bg;
+			border-radius: 10px;
+		}
+
+		&.fab {
+			transition: all 100ms ease;
+		}
+
+		.fa-instagram:hover {
+			background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+		}
+
+		.fa-twitter:hover {
+			background: linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
+		}
+
+		.fa-facebook:hover {
+			background: linear-gradient(120deg, #3b5998, #FFFFFF);
+		}
+
+		.fa-tiktok:hover {
+			filter: drop-shadow(2px 2px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@import "./variables";
+
+#navbar {
+	background-color: $light_bg;
+	box-shadow: 0 0 10px $shadow;
+	margin-bottom: 10px;
+	
+	nav {
+		padding: 20px 0;
+
+		> * {
+			padding: 20px;
+		}
+
+		a {
+			transition: background-color 150ms ease-in-out;
+			text-transform: uppercase;
+			font-style: italic;
+			font-size: 1.3rem;
+			font-weight: bold;
+			color: black;
+
+			&:hover {
+				background-color: darken($light_bg, 20%);
+			}
+		}
+	}
+}
