@@ -8,15 +8,22 @@
 	#main_description {
 		display: flex;
 		margin-top: 0;
-		font-size: 1rem;
+		font-size: 1.25rem;
 		font-weight: 400;
 		width: 50%;
-		padding: 0 10px;
 		text-align: justify;
 		float: left;
+		box-shadow: 0px 2px 7px #cccccc;
+		border-radius: 5px;
+		padding: 1rem;
 
 		@media screen and (max-width: 930px) {
 			width: 450px;
+			font-size: 1rem;
+		}
+
+		@media screen and (max-width: 1250px) {
+			width: 85%;
 		}
 	}
 
@@ -24,6 +31,8 @@
 		display: flex;
 		width: 450px;
 		float: right;
+		box-shadow: 0px 2px 7px #cccccc;
+		border-radius: 5px;
 	}
 
 	#desc_container {
@@ -42,10 +51,10 @@
 		box-shadow: 4px 4px $dark_sep;
 		text-align: center;
 
-		@media screen and (min-width: 1300px) {
-			width: 1200px;
-		}
-		margin: auto;
+		// @media screen and (min-width: 1300px) {
+		// 	width: 1200px;
+		// }
+
 		padding: 5px;
 	}
 
@@ -71,6 +80,7 @@
 
 	.Date_planning {
 		font-weight: bold;
+		text-transform: uppercase;
 	}
 
 	#infos_planning {
@@ -89,7 +99,6 @@
 		cursor: pointer;
 		padding: 13px 10px;
 		border-radius: 0.5rem;
-
 		&:hover {
 			color: $accent_main;
 			background-color: $light_hover;
@@ -100,14 +109,10 @@
 		.optional {
 			display: none;
 		}
-
-		.more_info {
-			display: inline-block;
-		}
 	}
 
-	@media screen and (min-width: 920px) {
-		.more_info {
+	@media screen and (min-width: 921px) {
+		.more-info {
 			display: none;
 		}
 	}

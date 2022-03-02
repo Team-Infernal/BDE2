@@ -1,0 +1,81 @@
+{
+	"events": [
+		{
+			"id": 1,
+			"name": "Bière",
+			"date": "2022-03-10T20:00:00Z",
+			"description": {
+				"short": "Lorem ipsum",
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
+			}
+		},
+		{
+			"id": 2,
+			"name": "Re-bière",
+			"date": "2022-03-09T10:00:00Z",
+			"description": {
+				"short": "Lorem ipsum",
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
+			}
+		},
+		{
+			"id": 3,
+			"name": "Encore bière",
+			"date": "2022-03-16T12:00:00Z",
+			"description": {
+				"short": "Lorem ipsum",
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
+			}
+		},
+		{
+			"id": 4,
+			"name": "Re-bière",
+			"date": "2022-03-02T10:00:00Z",
+			"description": {
+				"short": "Lorem ipsum",
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
+			}
+		},
+		{
+			"id": 5,
+			"name": "Encore bière",
+			"date": "2022-03-15T12:00:00Z",
+			"description": {
+				"short": "Lorem ipsum",
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
+			}
+		}
+	],
+	"quotes": [
+		"“Un code supprimé est un code débogué.”",
+		"“Le copier-coller a été programmé par des programmeurs pour des programmeurs.”",
+		"“Ça compile; on peut le ship!”",
+		"“Algorithme: Mot utilisé par les programmeurs quand ils ne veulent pas expliquer ce qu'ils ont fait.”",
+		"“Programmeur: Une machine qui transforme le café en code.”",
+		"“Ce n'est pas un bogue - c'est une fonctionnalité non documentée.”",
+		"“Dans une équipe de projet logiciel de dix personnes, il y a probablement trois personnes qui produisent suffisamment de bugs pour en faire des producteurs nets négatifs.”",
+		"“Ça fonctionne sur ma machine.”",
+		"“Quand j'ai écrit ce code, seuls dieu et moi comprenions ce que j'ai fait. Maintenant, seul dieu le sait.”",
+		"“Il y a deux façons d'écrire des programmes sans erreur; seule la troisième fonctionne.”",
+		"“Perl: Le seul langage qui a la même apparence avant et après le cryptage RSA.”",
+		"“Pour comprendre ce qu'est la récursion, vous devez d'abord comprendre la récursion.”",
+		"“La programmation a rendu l'impossible possible. Vous pouvez avoir un objet nul et une variable constante.”",
+		"“Il n'existe que deux types de langages de programmation. Ceux dont les gens se plaignent et ceux que personne n'utilise.”",
+		"“Défaillance du clavier. Appuyez sur F1 pour continuer.”",
+		"“Linux n'est gratuit que si votre temps n'a aucune valeur.”",
+		"“UNIX est simple. Il faut juste un génie pour comprendre sa simplicité.”",
+		"“Les partenaires potentiels sont comme les noms de domaine Internet - ceux qui me plaisent sont déjà pris.”",
+		"“Un administrateur système a deux problèmes: 1. Des utilisateurs idiots. 2. Les utilisateurs intelligents.”",
+		"“L'ordinateur est né pour résoudre des problèmes qui n'existaient pas auparavant.”",
+		"“Quand tout le reste échoue… redémarrez.”",
+		"“En théorie, il ne devrait pas y avoir de différence entre la théorie et la pratique. En pratique, il y en a une.”",
+		"“Je n'ai pas échoué. J'ai juste trouvé 10 000 façons qui ne fonctionneront pas.”",
+		"“Il n'y a pas de Ctrl-Z dans la vie.”",
+		"“Un fils a demandé à son père (un programmeur) pourquoi le soleil se lève à l'est et se couche à l'ouest. Sa réponse? Ça marche, il ne faut pas toucher!”",
+		"“J'ai enfin appris ce que signifie compatible. Ça veut dire qu'on peut garder toutes nos vieilles erreurs.”",
+		"“Un: les démonstrations se plantent toujours. Et deux: La probabilité qu'elles se plantent augmente de façon exponentielle avec le nombre de personnes qui les regardent.”",
+		"“99 petits bugs dans le code. 99 petits bugs dans le code. Enlevez-en un, corrigez-le. 127 petits bugs dans le code...”",
+		"“Les logiciels subissent des tests bêta peu avant leur sortie. Beta, c'est du latin pour dire “ça ne marche toujours pas”.”",
+		"“Un programme n'est jamais complet à moins de 90% et jamais à plus de 95%.”"
+	]
+}

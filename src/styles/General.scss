@@ -13,6 +13,9 @@ body {
 	background-size: 0% 3px;
 	background-repeat: no-repeat;
 	background-position: bottom left;
+	&.inverted {
+		background-position: bottom right;
+	}
 	transition: background-size 300ms ease;
 	text-decoration: none;
 	color: inherit;
