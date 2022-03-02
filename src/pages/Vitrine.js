@@ -1,7 +1,7 @@
 export const Vitrine = () => {
 	return (
-		<>
-			<h1>Vitrine</h1>
-		</>
+		<main id="main">
+			<h1 id="page-title">Vitrine</h1>
+		</main>
 	);
 }

@@ -1,8 +1,12 @@
 @import "./variables";
 
-#main {
+#main2 {
+	min-height: 70vh;
+	padding: 3rem;
+
 	.title {
 		text-align: center;
+		margin: 0;
 	}
 
 	#main_description {

@@ -6,7 +6,7 @@ import "../styles/Accueil.scss";
 export const Accueil = () => {
 	
 	moment.locale("fr");
-	const data = require("../components/content/content.json");
+	const data = require("../content.json");
 	const events = data.events;
 	let viewEventsAmount = 3;
 
@@ -17,7 +17,7 @@ export const Accueil = () => {
 	}
 
 	return (
-		<main>
+		<main id="main2">
 			<h1 className="title"> <i className="fa-brands fa-audible fa-fw accent"></i> Nom incroyable de BDE</h1>
 
 			<div id="desc_container">

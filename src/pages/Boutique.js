@@ -1,7 +1,7 @@
 export const Boutique = () => {
 	return (
-		<>
-			<h1>Boutique</h1>
-		</>
+		<main id="main">
+			<h1 id="page-title">Boutique</h1>
+		</main>
 	);
 }

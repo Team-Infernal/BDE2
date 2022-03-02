@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 import "../styles/Footer.scss";
 
 export const Footer = () => {
 
-	const data = require("./content/content.json");
+	const data = require("../content.json");
 	const quotes = data.quotes;
 	const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
 	const randomQuote = getRandomQuote();
@@ -22,9 +24,9 @@ export const Footer = () => {
 			<div id="footer-links">
 				<div id="footer-links-info">
 					<div>
-						<span><a className="fancy-link" href="#about">A propos</a></span>
-						<span><a className="fancy-link" href="#conditions">Conditions d'utilisation</a></span>
-						<span><a className="fancy-link" href="#privacy">Confidentialité</a></span>
+						{/* <span><NavLink to="a-propos" className="fancy-link">A propos</NavLink></span> */}
+						<span><NavLink to="conditions-utilisation" className="fancy-link">Conditions d'utilisation</NavLink></span>
+						<span><NavLink to="confidentialite" className="fancy-link">Confidentialité</NavLink></span>
 						<span><a className="fancy-link" href="https://teaminfernal.fr" target="_blank" rel="noreferrer">Powered by Infernal</a> <span id="footer-copyright">© 2022</span></span>
 					</div>
 				</div>
