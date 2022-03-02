@@ -10,9 +10,12 @@ export const Accueil = () => {
 			</div>
 			<h1><i className="fas fa-calendar-days"></i> Planning des prochains événements </h1>
 			<div id="planning">
-				<p className="event_name"><span className="Date_planning">Jeudi 24 décembre :</span> Bière</p>
-				<p className="event_name"><span className="Date_planning">Jeudi 24 décembre :</span> Re-bière</p>
-				<p className="event_name"><span className="Date_planning">Jeudi 24 décembre :</span> Encore bière</p>
+				<div className="test">
+					<i className="fas fa-angle-right fa-fw more-info"></i>
+					<p className="event_name"><span className="Date_planning">Jeudi 24 décembre : </span> Bière <span className="optional">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor.</span></p>
+				</div>
+				<p className="event_name"><span className="Date_planning">Jeudi 25 décembre :</span> Re-bière <span className="optional">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor.</span></p>
+				<p className="event_name"><span className="Date_planning">Jeudi 26 décembre :</span> Encore bière <span className="optional">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor.</span></p>
 				<p className="event_name" id="border_to_hide"><span className="Date_planning">A suivre :</span> <a href="#a">En savoir plus</a></p>
 			</div>
 		</main>

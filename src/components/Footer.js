@@ -13,16 +13,12 @@ export const Footer = () => {
 					<p className="">Lorem ipsum dolor sit amet. Aut sint explicabo eos eaque officiis est ipsum libero quo dolores delectus.</p>
 				</div>
 			</div>
-			<div id="footer-logos">
-				<p>
-					<a className="fancy-link" href="#about">A propos</a>
-					<span className="separator">—</span>
-					<i className="logo fa-brands fa-twitter fa-fw"></i>
-					<i className="logo fa-brands fa-instagram fa-fw"></i>
-					<i className="logo fa-brands fa-linkedin-in fa-fw"></i>
-					<i className="logo fa-brands fa-discord fa-fw"></i>
-					{/* <img id="charles" src={charles} alt="charles" /> */}
-				</p>
+			<div id="footer-links">
+				<p id="footer-about"><i className="fa-solid fa-circle-info fa-fw accent"></i> <a className="fancy-link" href="#about">A propos</a></p>
+				<p title="Twitter"><a href="https://twitter.com" target="_blank" rel="noreferrer"><i className="logo fa-brands fa-twitter fa-fw"></i></a></p>
+				<p title="Instagram"><a href="https://instagram.com" target="_blank" rel="noreferrer"><i className="logo fa-brands fa-instagram fa-fw"></i></a></p>
+				<p title="LinkedIn"><a href="https://linkedin.com" target="_blank" rel="noreferrer"><i className="logo fa-brands fa-linkedin-in fa-fw"></i></a></p>
+				<p title="Discord"><a href="https://discord.com" target="_blank" rel="noreferrer"><i className="logo fa-brands fa-discord fa-fw"></i></a></p>
 			</div>
 		</footer>
 	);

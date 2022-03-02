@@ -32,12 +32,16 @@
 		}
 	}
 
-	#footer-logos {
-		text-align: center;
-		display: inline;
+	#footer-links {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+		margin: 3rem 0 0 0;
+		gap: 1rem;
 
 		.logo {
-			margin: 1rem;
 			padding: 15px 10px;
 			background-color: transparent;
 			border-radius: $icon_border;
@@ -50,18 +54,18 @@
 			}
 		}
 
-		.separator {
-			margin: 1rem 3rem;
+		p {
+			margin: 0;
 		}
 
 		a {
-			margin: 1rem;
 			text-decoration: none;
 			color: white;
 		}
 
-		p {
-			margin: 2rem 0 0 0;
+		#footer-about {
+			margin-right: auto;
+			font-size: 1.5rem;
 		}
 	}
 }

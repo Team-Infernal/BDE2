@@ -1,69 +1,114 @@
 @import "./variables";
 
-.title {
-    text-align: center;
-}
+#main {
+	.title {
+		text-align: center;
+	}
 
-#main_description {
-    display: flex;
-    margin-top: 0;
-    font-size: 1rem;
-    font-weight: 400;
-    width: 50%;
-    padding: 0 10px;
-    text-align: justify;
-    float: left;
+	#main_description {
+		display: flex;
+		margin-top: 0;
+		font-size: 1rem;
+		font-weight: 400;
+		width: 50%;
+		padding: 0 10px;
+		text-align: justify;
+		float: left;
 
-    @media screen and (max-width: 930px) {
-        width: 450px;
-    }
-}
+		@media screen and (max-width: 930px) {
+			width: 450px;
+		}
+	}
 
-#main_img {
-    display: flex;
-    width: 450px;
-    float: right;
-}
+	#main_img {
+		display: flex;
+		width: 450px;
+		float: right;
+	}
 
-#desc_container {
-    margin-top: 100px;
-    display: flex;
-    justify-content: space-around;
-    gap: 40px;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
-}
+	#desc_container {
+		margin-top: 100px;
+		display: flex;
+		justify-content: space-around;
+		gap: 40px;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 100px;
+	}
 
-#planning {
-    border: 1px solid $dark_sep;
-    border-radius: 3px;
-    box-shadow: 4px 4px $dark_sep;
-    text-align: center;
-}
+	#planning {
+		border: 1px solid $dark_sep;
+		border-radius: 3px;
+		box-shadow: 4px 4px $dark_sep;
+		text-align: center;
 
-.event_name {
-    border-bottom: 1px solid $dark;
-    display: flex;
-    flex-direction: column;
-    font-weight: lighter;
-}
+		@media screen and (min-width: 1300px) {
+			width: 1200px;
+		}
+		margin: auto;
+		padding: 5px;
+	}
 
-a span {
-    color: white;
-    text-decoration: none;
-}
+	.event_name {
+		border-bottom: 1px solid $dark;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		font-weight: lighter;
+		padding: 10px;
+		margin: 0;
+	}
 
-#border_to_hide {
-    margin-bottom: 2px;
-    border-bottom: none;
-}
+	a span {
+		color: white;
+		text-decoration: none;
+	}
 
-.Date_planning {
-    font-weight: bold;
-}
+	#border_to_hide {
+		margin-bottom: 2px;
+		border-bottom: none;
+	}
 
-#infos_planning {
-    margin-top: 0; 
-    font-size: 15px;
+	.Date_planning {
+		font-weight: bold;
+	}
+
+	#infos_planning {
+		margin-top: 0;
+		font-size: 15px;
+	}
+
+	.test {
+		position: relative;
+	}
+
+	.more-info {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		cursor: pointer;
+		padding: 13px 10px;
+		border-radius: 0.5rem;
+
+		&:hover {
+			color: $accent_main;
+			background-color: $light_hover;
+		}
+	}
+
+	@media screen and (max-width: 920px) {
+		.optional {
+			display: none;
+		}
+
+		.more_info {
+			display: inline-block;
+		}
+	}
+
+	@media screen and (min-width: 920px) {
+		.more_info {
+			display: none;
+		}
+	}
 }
