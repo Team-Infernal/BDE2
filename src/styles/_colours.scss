@@ -1,0 +1,135 @@
+$colours: (
+	greyscale: (
+		100: hsl(0, 0%, 100%),
+		95: hsl(0, 0%, 95%),
+		90: hsl(0, 0%, 90%),
+		85: hsl(0, 0%, 85%),
+		80: hsl(0, 0%, 80%),
+		75: hsl(0, 0%, 75%),
+		70: hsl(0, 0%, 70%),
+		65: hsl(0, 0%, 65%),
+		60: hsl(0, 0%, 60%),
+		55: hsl(0, 0%, 55%),
+		50: hsl(0, 0%, 50%),
+		45: hsl(0, 0%, 45%),
+		40: hsl(0, 0%, 40%),
+		35: hsl(0, 0%, 35%),
+		30: hsl(0, 0%, 30%),
+		25: hsl(0, 0%, 25%),
+		20: hsl(0, 0%, 20%),
+		15: hsl(0, 0%, 15%),
+		10: hsl(0, 0%, 10%),
+		5: hsl(0, 0%, 5%),
+		0: hsl(0, 0%, 0%),
+	),
+	red: (
+		base: hsl(0, 100%, 50%),
+		base-hover: hsl(0, 100%, 45%),
+		pastel: hsl(0, 100%, 65%),
+		pastel-hover: hsl(0, 100%, 60%),
+		dark: hsl(0, 100%, 25%),
+		dark-hover: hsl(0, 100%, 20%),
+	),
+	orange: (
+		base: hsl(30, 100%, 50%),
+		base-hover: hsl(30, 100%, 45%),
+		pastel: hsl(30, 100%, 65%),
+		pastel-hover: hsl(30, 100%, 60%),
+		dark: hsl(30, 100%, 25%),
+		dark-hover: hsl(30, 100%, 20%),
+	),
+	yellow: (
+		base: hsl(60, 100%, 50%),
+		base-hover: hsl(60, 100%, 45%),
+		pastel: hsl(60, 100%, 65%),
+		pastel-hover: hsl(60, 100%, 60%),
+		dark: hsl(60, 100%, 25%),
+		dark-hover: hsl(60, 100%, 20%),
+	),
+	lime: (
+		base: hsl(90, 100%, 50%),
+		base-hover: hsl(90, 100%, 45%),
+		pastel: hsl(90, 100%, 65%),
+		pastel-hover: hsl(90, 100%, 60%),
+		dark: hsl(90, 100%, 25%),
+		dark-hover: hsl(90, 100%, 20%),
+	),
+	green: (
+		base: hsl(120, 100%, 50%),
+		base-hover: hsl(120, 100%, 45%),
+		pastel: hsl(120, 100%, 65%),
+		pastel-hover: hsl(120, 100%, 60%),
+		dark: hsl(120, 100%, 25%),
+		dark-hover: hsl(120, 100%, 20%),
+	),
+	mint: (
+		base: hsl(150, 100%, 50%),
+		base-hover: hsl(150, 100%, 45%),
+		pastel: hsl(150, 100%, 65%),
+		pastel-hover: hsl(150, 100%, 60%),
+		dark: hsl(150, 100%, 25%),
+		dark-hover: hsl(150, 100%, 20%),
+	),
+	lightblue: (
+		base: hsl(180, 100%, 50%),
+		base-hover: hsl(180, 100%, 45%),
+		pastel: hsl(180, 100%, 65%),
+		pastel-hover: hsl(180, 100%, 60%),
+		dark: hsl(180, 100%, 25%),
+		dark-hover: hsl(180, 100%, 20%),
+	),
+	cyan: (
+		base: hsl(210, 100%, 50%),
+		base-hover: hsl(210, 100%, 45%),
+		pastel: hsl(210, 100%, 65%),
+		pastel-hover: hsl(210, 100%, 60%),
+		dark: hsl(210, 100%, 25%),
+		dark-hover: hsl(210, 100%, 20%),
+	),
+	blue: (
+		base: hsl(240, 100%, 50%),
+		base-hover: hsl(240, 100%, 45%),
+		pastel: hsl(240, 100%, 65%),
+		pastel-hover: hsl(240, 100%, 60%),
+		dark: hsl(240, 100%, 25%),
+		dark-hover: hsl(240, 100%, 20%),
+	),
+	purple: (
+		base: hsl(270, 100%, 50%),
+		base-hover: hsl(270, 100%, 45%),
+		pastel: hsl(270, 100%, 65%),
+		pastel-hover: hsl(270, 100%, 60%),
+		dark: hsl(270, 100%, 25%),
+		dark-hover: hsl(270, 100%, 20%),
+	),
+	pink: (
+		base: hsl(300, 100%, 50%),
+		base-hover: hsl(300, 100%, 45%),
+		pastel: hsl(300, 100%, 65%),
+		pastel-hover: hsl(300, 100%, 60%),
+		dark: hsl(300, 100%, 25%),
+		dark-hover: hsl(300, 100%, 20%),
+	),
+	hotpink: (
+		base: hsl(330, 100%, 50%),
+		base-hover: hsl(330, 100%, 45%),
+		pastel: hsl(330, 100%, 65%),
+		pastel-hover: hsl(330, 100%, 60%),
+		dark: hsl(330, 100%, 25%),
+		dark-hover: hsl(330, 100%, 20%),
+	),
+);
+
+@function colour($colour, $variant) {
+	@if map-has-key($colours, $colour) {
+		$colour: map-get($colours, $colour);
+		@if map-has-key($colour, $variant) {
+			$variant: map-get($colour, $variant);
+			@return $variant;
+		}
+		@warn "Variant unknown: `#{$variant}`";
+		@return null;
+	}
+	@warn "Colour unknown: `#{$colour}`";
+	@return null;
+}

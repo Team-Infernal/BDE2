@@ -1,43 +1,67 @@
 @import "./variables";
 
 #footer {
-	min-height: 20vh;
-	padding: 50px;
-	background-color: $dark_bg;
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
 	font-size: 2rem;
-	color: $light_bg;
+	background-color: $dark;
+	color: $light;
+	padding: 3rem;
 
-	&-logos {
-		grid-column: 2 / span 3;
+	#footer-content {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+		border-bottom: 1px solid $dark_sep;
+		padding-bottom: 3rem;
+
+		&-1,
+		&-2 {
+			> * {
+				margin: 0;
+			}
+		}
+
+		&-1 {
+			h3 {
+				margin-bottom: 3rem;
+			}
+
+			h4 {
+				font-size: 1.5rem;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	#footer-logos {
 		text-align: center;
+		display: inline;
 
-		> * {
-			margin: 0 10px;
-			padding: 10px;
-			border: 2px solid $light_bg;
-			border-radius: 10px;
+		.logo {
+			margin: 1rem;
+			padding: 15px 10px;
+			background-color: transparent;
+			border-radius: $icon_border;
+			transition: background-color 100ms ease, color 100ms ease;
+			cursor: pointer;
+
+			&:hover {
+				background-color: lighten($dark, 10%);
+				color: $accent_main;
+			}
 		}
 
-		&.fab {
-			transition: all 100ms ease;
+		.separator {
+			margin: 1rem 3rem;
 		}
 
-		.fa-instagram:hover {
-			background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+		a {
+			margin: 1rem;
+			text-decoration: none;
+			color: white;
 		}
 
-		.fa-twitter:hover {
-			background: linear-gradient(45deg, #66757f, #00ACEE, #36D8FF, #f5f8fa, #ffffff);
-		}
-
-		.fa-facebook:hover {
-			background: linear-gradient(120deg, #3b5998, #FFFFFF);
-		}
-
-		.fa-tiktok:hover {
-			filter: drop-shadow(2px 2px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+		p {
+			margin: 2rem 0 0 0;
 		}
 	}
 }

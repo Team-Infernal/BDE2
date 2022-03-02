@@ -1,15 +1,27 @@
+@import "./variables";
+
 body {
 	margin: 0;
 	background-color: white;
-	font-family: "DM Sans", sans-serif;
+	font-family: $font_family;
 	font-weight: 500;
+	color: $dark;
+}
 
-	h1 {
-		margin: 0;
-		font-size: 2rem;
-	}
+.fancy-link {
+	background-image: linear-gradient(90deg, $accent_main, $accent_main_hover);
+	background-size: 0% 3px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	transition: background-size 300ms ease;
+	text-decoration: none;
+	color: inherit;
 
-	a {
-		text-decoration: none;
+	&:hover {
+		background-size: 100% 3px;
 	}
+}
+
+.accent {
+	color: $accent_main;
 }

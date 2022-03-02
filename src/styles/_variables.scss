@@ -1,4 +1,20 @@
-$dark_bg: #101010;
-$light_bg: #ffffff;
-$accent_main: #0062f5;
+@import "./colours";
+
+$dark: #1d1e22;
+$light: #ffffff;
+$light_hover: darken($light, 10%);
+
+$accent: mint;
+$accent_main: colour($accent, base);
+$accent_main_hover: colour($accent, base-hover);
+$accent_light: colour($accent, pastel);
+$accent_light_hover: colour($accent, pastel-hover);
+$accent_dark: colour($accent, dark);
+$accent_dark_hover: colour($accent, dark-hover);
+
 $shadow: #9e9e9e;
+$dark_sep: #666666;
+
+$font_family: "DM Sans", sans-serif;
+
+$icon_border: 15px;

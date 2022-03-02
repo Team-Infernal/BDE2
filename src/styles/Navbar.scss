@@ -1,28 +1,39 @@
 @import "./variables";
 
 #navbar {
-	background-color: $light_bg;
-	box-shadow: 0 0 10px $shadow;
-	margin-bottom: 10px;
-	
 	nav {
-		padding: 20px 0;
+		background-color: $dark;
+		padding: 3rem;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: stretch;
+		gap: 3rem;
 
-		> * {
-			padding: 20px;
+		p {
+			margin: 0;
+			text-transform: uppercase;
+			// font-style: italic;
+			font-size: 1.5rem;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		
+		a {
+			color: $light;
+			text-decoration: none;
 		}
 
-		a {
-			transition: background-color 150ms ease-in-out;
-			text-transform: uppercase;
-			font-style: italic;
-			font-size: 1.3rem;
-			font-weight: bold;
-			color: black;
+		#page-logo {
+			margin-right: auto;
+		}
 
-			&:hover {
-				background-color: darken($light_bg, 20%);
+		.connexion {
+			a {
+				color: $accent_main;
 			}
 		}
 	}
+
 }
