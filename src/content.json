@@ -6,8 +6,9 @@
 			"date": "2022-03-10T20:00:00Z",
 			"description": {
 				"short": "Lorem ipsum",
-				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
-			}
+				"full": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste at, ipsam deserunt deleniti molestiae voluptatibus. Excepturi cupiditate a, id asperiores aperiam sunt laudantium tenetur natus omnis libero aliquid, non cum nemo commodi quisquam sequi voluptate. Iure molestiae quisquam quos sequi fugit numquam odio consequatur incidunt rem quidem aliquid placeat expedita itaque a vero, ab officiis distinctio commodi voluptas maxime tempore voluptate molestias! Numquam, voluptatibus dolorum minima unde libero eligendi quos esse nemo assumenda doloremque expedita officia cum illo id vero nesciunt perferendis eum commodi eius qui nobis in nulla! Fugiat, consequatur ipsa pariatur temporibus fuga culpa. Minus, tempore dolor. Sapiente?"
+			},
+			"location": "En ligne (Instagram)"
 		},
 		{
 			"id": 2,
@@ -15,8 +16,9 @@
 			"date": "2022-03-09T10:00:00Z",
 			"description": {
 				"short": "Lorem ipsum",
-				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
-			}
+				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus."
+			},
+			"location": "Rouen"
 		},
 		{
 			"id": 3,
@@ -25,7 +27,8 @@
 			"description": {
 				"short": "Lorem ipsum",
 				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
-			}
+			},
+			"location": "Paris"
 		},
 		{
 			"id": 4,
@@ -34,7 +37,8 @@
 			"description": {
 				"short": "Lorem ipsum",
 				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
-			}
+			},
+			"location": "Caen"
 		},
 		{
 			"id": 5,
@@ -43,7 +47,8 @@
 			"description": {
 				"short": "Lorem ipsum",
 				"full": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet dignissim lacus. In tempus, mauris eget convallis sollicitudin, neque dolor."
-			}
+			},
+			"location": "En ligne (Discord)"
 		}
 	],
 	"quotes": [

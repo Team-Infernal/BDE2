@@ -8,39 +8,96 @@
 		margin: 0 0 1rem 0;
 	}
 
-	#upcoming-content {
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		// box-shadow: 0 2px 5px #ccc;
-		background-color: #eee;
+	#upcoming-container {
+		display: flex;
+		flex-direction: row;
+		box-shadow: $element_shadow;
 		border-radius: $border_radius;
+		overflow: hidden;
 
-		.upcoming-date {
-			margin: 0;
-			padding: 1.5rem;
+		#upcoming-dates {
+			width: 0;
+			flex-grow: 1;
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: $dark;
-			color: $light;
+			flex-direction: column;
+			align-items: stretch;
+			border-right: 0.5rem solid $accent_main_hover;
+			background-color: $accent_main_hover;
 
-			&:first-of-type {
-				border-top-left-radius: $border_radius;
+			.upcoming-date {
+				padding: 1rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background: linear-gradient(to right, $dark 50%, $accent_main 50%);
+				background-size: 200% 100%;
+				background-position: left bottom;
+				color: $light;
+				transition: background-position 250ms ease, color 250ms ease;
+
+				&:last-child {
+					flex-grow: 1;
+					justify-content: flex-start;
+				}
+	
+				&:not(.upcoming-filler):hover {
+					background-position: right bottom;
+					color: $dark;
+					cursor: pointer;
+				}
+	
+				&.active {
+					background: $accent_main_hover;
+					background-position: right bottom;
+					color: $dark;
+				}
+				
+				h3 {
+					margin: 0;
+				}
+
+				.day::after {
+					content: " — ";
+				}
+
+				&.upcoming-filler {
+					padding: 0;
+					background-color: $dark;
+				}
+
+				&.roundTop {
+					border-top-right-radius: $border_radius;
+				}
+
+				&.roundBottom {
+					border-bottom-right-radius: $border_radius;
+				}
 			}
 
-			&:last-of-type {
-				border-bottom-left-radius: $border_radius;
-			}
-
-			&:hover {
+			.upcoming-more {
+				text-decoration: none;
 			}
 		}
 
-		.upcoming-details {
-			margin: 0;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		#upcoming-details {
+			width: 0;
+			flex-grow: 2;
+			padding: 2rem;
+
+			&-title {
+				margin: 0;
+				font-size: 2rem;
+			}
+
+			&-full {
+				p {
+					margin: 1rem 0;
+					font-size: 1.25rem;
+				}
+			}
 		}
 	}
+
+	
 }
