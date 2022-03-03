@@ -6,6 +6,15 @@ body {
 	font-family: $font_family;
 	font-weight: 500;
 	color: $dark;
+	// overflow-x: hidden;
+}
+
+.accent {
+	color: $accent_main;
+}
+
+.accent-dark {
+	color: $accent_main_hover;
 }
 
 .fancy-link {
@@ -25,6 +34,28 @@ body {
 	}
 }
 
-.accent {
-	color: $accent_main;
+.fancy-underline {
+	background-image: linear-gradient(90deg, $accent_main, $accent_main_hover);
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	text-decoration: none;
+	color: inherit;
+}
+
+.fancy-text {
+	background: linear-gradient(90deg, $accent_main, $accent_dark);
+	background-size: 200% 100%;
+	background-clip: text;
+	color: transparent;
+	animation: gradientCycle 10s ease infinite alternate-reverse;
+}
+
+@keyframes gradientCycle {
+	from {
+		background-position: bottom left;
+	}
+	to {
+		background-position: bottom right;
+	}
 }

@@ -1,0 +1,64 @@
+@import "./variables";
+
+#about {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5rem;
+	margin: 5vh 0 20vh 0;
+
+	.section {
+		&-title {
+			font-size: 2rem;
+			margin: 0 0 1rem 0;
+		}
+		
+		&-description {
+			font-size: 1.5rem;
+		}
+	}
+
+	&-title {
+		font-size: 6rem;
+		margin: 0 0 2rem 0;
+		// width: fit-content;
+	}
+
+	&-text-container {
+		width: 40%;
+		flex-grow: 1;
+	}
+
+	&-image-container {
+		width: 50%;
+		flex-grow: 1;
+		display: flex;
+		justify-content: center;
+
+		#about-image {
+			display: block;
+			width: 60vh;
+			border-radius: $border_radius;
+		}
+	}
+
+	@media screen and (max-width: $mediaTabletMax) {
+		margin: 2rem 0;
+
+		&-title {
+			font-size: 3rem;
+			text-align: center;
+		}
+
+		&-text-container {
+			text-align: center;
+
+			.section-description {
+				text-align: justify;
+			}
+		}
+	}
+}

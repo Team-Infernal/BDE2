@@ -25,7 +25,7 @@ export const Upcoming = () => {
 
 	return (
 		<section id="upcoming">
-			<h1 className="section-title">Événements à venir</h1>
+			<h2 className="section-title">Événements à venir</h2>
 			<div id="upcoming-container">
 				<div id="upcoming-dates">
 					{
@@ -49,9 +49,9 @@ export const Upcoming = () => {
 				<div id="upcoming-details">
 					<h2 id="upcoming-details-title">{selectedEvent.name}</h2>
 					<div id="upcoming-details-full">
-						<p><i className="fa-solid fa-calendar-days fa-fw accent"></i> {convertDate(selectedEvent.date)}</p>
-						<p><i className="fa-solid fa-location-dot fa-fw accent"></i> {selectedEvent.location}</p>
-						<p><i className="fa-solid fa-circle-question fa-fw accent"></i> {selectedEvent.description.full}</p>
+						<p><i className="fa-solid fa-calendar-days fa-fw accent-dark"></i> {convertDate(selectedEvent.date)}</p>
+						<p><i className="fa-solid fa-location-dot fa-fw accent-dark"></i> {selectedEvent.location}</p>
+						<p><i className="fa-solid fa-circle-question fa-fw accent-dark"></i> {selectedEvent.description.full}</p>
 					</div>
 				</div>
 			</div>

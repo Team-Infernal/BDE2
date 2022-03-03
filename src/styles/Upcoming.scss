@@ -1,11 +1,10 @@
 @import "./variables";
 
 #upcoming {
-	margin: 3rem 0;
 
 	.section-title {
 		font-size: 2rem;
-		margin: 0 0 1rem 0;
+		margin: 0 0 2rem 0;
 	}
 
 	#upcoming-container {
@@ -99,5 +98,51 @@
 		}
 	}
 
+	@media screen and (max-width: $mediaTabletMax) {
+		#upcoming-container {
+			flex-direction: column;
+			border-left: 0.5rem solid $accent_main_hover;
+
+			#upcoming-dates {
+				width: 100%;
+				flex-grow: 1;
+
+				.upcoming-date {
+					background: linear-gradient(to left, $dark 50%, $accent_main 50%);
+					background-size: 200% 100%;
+					background-position: right bottom;
+
+					&.active {
+						background: $accent_main_hover;
+						background-position: left bottom;
+					}
+
+					&:not(.active):hover {
+						color: $light;
+						cursor: pointer;
+					}
+
+					&.upcoming-filler {
+						display: none;
+					}
+
+					&.roundTop {
+						border-top-left-radius: $border_radius;
+						border-top-right-radius: 0;
+					}
+	
+					&.roundBottom {
+						border-bottom-left-radius: $border_radius;
+						border-bottom-right-radius: 0;
+					}
+				}
+			}
+
+			#upcoming-details {
+				width: auto;
+				flex-grow: 1;
+			}
+		}
+	}
 	
 }

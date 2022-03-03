@@ -1,8 +1,8 @@
 @import "./variables";
 
-#main {
+main {
 	min-height: 70vh;
-	padding: 3rem;
+	padding: 5rem;
 
 	#page-title {
 		margin: 0;
@@ -21,6 +21,18 @@
 
 		p {
 			margin: 0;
+		}
+	}
+
+	section:not(:last-of-type) {
+		margin-bottom: 3rem; 
+	}
+
+	@media screen and (max-width: $mediaTabletMax) {
+		padding: 2rem;
+
+		.section-title {
+			text-align: center;
 		}
 	}
 }
