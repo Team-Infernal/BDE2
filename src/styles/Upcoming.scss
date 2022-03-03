@@ -1,0 +1,46 @@
+@import "./variables";
+
+#upcoming {
+	margin: 3rem 0;
+
+	.section-title {
+		font-size: 2rem;
+		margin: 0 0 1rem 0;
+	}
+
+	#upcoming-content {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		// box-shadow: 0 2px 5px #ccc;
+		background-color: #eee;
+		border-radius: $border_radius;
+
+		.upcoming-date {
+			margin: 0;
+			padding: 1.5rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $dark;
+			color: $light;
+
+			&:first-of-type {
+				border-top-left-radius: $border_radius;
+			}
+
+			&:last-of-type {
+				border-bottom-left-radius: $border_radius;
+			}
+
+			&:hover {
+			}
+		}
+
+		.upcoming-details {
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}

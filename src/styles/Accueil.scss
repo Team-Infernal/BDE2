@@ -55,9 +55,9 @@
 		box-shadow: 4px 4px $dark_sep;
 		text-align: center;
 
-		// @media screen and (min-width: 1300px) {
-		// 	width: 1200px;
-		// }
+		@media screen and (min-width: 1300px) {
+			width: 1200px;
+		}
 
 		padding: 5px;
 	}

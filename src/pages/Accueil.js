@@ -1,13 +1,14 @@
 import moment from "moment";
 import "moment/locale/fr";
 
+import { Upcoming } from "../components/Upcoming";
+import { Upcoming2 } from "../components/Upcoming2";
 import "../styles/Accueil.scss";
 
 export const Accueil = () => {
 	
 	moment.locale("fr");
-	const data = require("../content.json");
-	const events = data.events;
+	const { events } = require("../content.json");
 	let viewEventsAmount = 3;
 
 	const convertDate = (inputDate) => moment(inputDate).format("dddd D MMMM - H:mm");
@@ -27,8 +28,10 @@ export const Accueil = () => {
 			
 			</div>
 
-			<h1><i className="fas fa-calendar-days fa-fw"></i> Planning des prochains événements </h1>
+			<Upcoming />
+			<Upcoming2 />
 
+			<h1><i className="fas fa-calendar-days fa-fw"></i> Planning des prochains événements </h1>
 			<div id="planning">
 				{
 					events.filter(event => moment().isBefore(moment(event.date)))

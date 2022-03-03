@@ -37,10 +37,12 @@
 
 		&-2 {
 			display: flex;
-			justify-content: end;
+			justify-content: flex-end;
 			align-items: flex-end;
 			text-align: right;
 			font-style: italic;
+			font-size: 2rem;
+			font-weight: 400;
 		}
 	}
 
@@ -60,7 +62,7 @@
 					content: " — ";
 				}
 			}
-			
+
 			#footer-copyright {
 				color: $dark_sep;
 			}
@@ -113,11 +115,10 @@
 
 				div {
 					& span {
-						
 						&:not(:last-of-type) {
 							display: block;
 							margin: 0 0 1rem 0;
-							
+
 							&::after {
 								content: "";
 							}
@@ -141,11 +142,10 @@
 
 				div {
 					& span {
-						
 						&:not(:last-of-type) {
 							display: block;
 							margin: 0 0 1rem 0;
-							
+
 							&::after {
 								content: "";
 							}
