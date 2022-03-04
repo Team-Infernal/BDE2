@@ -15,7 +15,8 @@ export const Navbar = () => {
 				</div>
 				<div id="navbar-links-container" className={expanded ? "expanded" : "minimized"}>
 					<p className={`fancy-link inverted ${pathname === "/" ? "active" : ""}`}><NavLink to="/" className="">Accueil</NavLink></p>
-					<p className={`fancy-link inverted ${pathname === "/vitrine" ? "active" : ""}`}><NavLink to="vitrine">Vitrine</NavLink></p>
+					<p className={`fancy-link inverted ${pathname === "/equipe" ? "active" : ""}`}><NavLink to="equipe" className="">Equipe</NavLink></p>
+					<p className={`fancy-link inverted ${pathname === "/evenements" ? "active" : ""}`}><NavLink to="evenements">Evenements</NavLink></p>
 					<p className={`fancy-link inverted ${pathname === "/boutique" ? "active" : ""}`}><NavLink to="boutique">Boutique</NavLink></p>
 					<p className={`fancy-link inverted connexion ${pathname === "/connexion" ? "active" : ""}`}><NavLink to="connexion">Connexion</NavLink></p>
 					<p id="nav-menu" onClick={() => setExpanded(!expanded)}><i className="fa-solid fa-bars fa-fw"></i></p>

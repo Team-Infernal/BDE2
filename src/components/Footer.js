@@ -23,7 +23,7 @@ export const Footer = () => {
 					<h4><i className="fa-solid fa-location-dot fa-fw accent"></i> <a className="fancy-link" href="https://goo.gl/maps/hPD9r2huAapAYFHr7" target="_blank" rel="noreferrer">CESI Rouen</a></h4>
 				</div>
 				<div id="footer-content-2">
-					<p>{!quotes ? "Chargement..." : `${getRandomQuote()}`}</p>
+					<p>{!quotes ? "" : `${getRandomQuote()}`}</p>
 				</div>
 			</div>
 			<div id="footer-links">

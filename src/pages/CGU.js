@@ -1,6 +1,13 @@
-export const CGU = () => {
+import { useState, useEffect } from "react";
 
-	const { cgu } = require("../content.json");
+export const CGU = () => {
+	const [cgu, setCGU] = useState([]);
+
+	useEffect(() => {
+		fetch("/api/cgu")
+			.then(res => res.json())
+			.then(data => setCGU(data));
+	}, []);
 
 	return (
 		<main id="main">
