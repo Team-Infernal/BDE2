@@ -1,12 +1,18 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import "../styles/Footer.scss";
 
 export const Footer = () => {
+	const [quotes, setQuotes] = useState(null);
 
-	const{ quotes } = require("../content.json");
+	useEffect(() => {
+		fetch("/api/quotes")
+			.then(res => res.json())
+			.then(data => setQuotes(data));
+	}, []);
+
 	const getRandomQuote = () => quotes[Math.floor(Math.random() * quotes.length)];
-	const randomQuote = getRandomQuote();
 
 	return (
 		<footer id="footer">
@@ -17,7 +23,7 @@ export const Footer = () => {
 					<h4><i className="fa-solid fa-location-dot fa-fw accent"></i> <a className="fancy-link" href="https://goo.gl/maps/hPD9r2huAapAYFHr7" target="_blank" rel="noreferrer">CESI Rouen</a></h4>
 				</div>
 				<div id="footer-content-2">
-					<p>{randomQuote}</p>
+					<p>{!quotes ? "Chargement..." : `${getRandomQuote()}`}</p>
 				</div>
 			</div>
 			<div id="footer-links">

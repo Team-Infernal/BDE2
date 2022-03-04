@@ -8,6 +8,7 @@ import { Erreur } from "../pages/Erreur";
 import { CGU } from "../pages/CGU";
 import { Confidentialite } from "../pages/Confidentialite";
 import { Evenements } from "../pages/Evenements";
+import { Equipe } from "../pages/Equipe";
 import "../styles/Main.scss";
 
 export const Main = () => {
@@ -20,6 +21,7 @@ export const Main = () => {
 			<Route path="/conditions-utilisation" element={<CGU />}></Route>
 			<Route path="/confidentialite" element={<Confidentialite />}></Route>
 			<Route path="/evenements" element={<Evenements />}></Route>
+			<Route path="/equipe" element={<Equipe />}></Route>
 			<Route path="*" element={<Erreur />}></Route>
 		</Routes>
 	);

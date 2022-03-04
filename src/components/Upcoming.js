@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import moment from "moment";
 import "moment/locale/fr";
@@ -7,12 +7,20 @@ import "../styles/Upcoming.scss";
 
 export const Upcoming = () => {
 	const [selectedEventId, setSelectedEventId] = useState(0);
+	// const [events, setEvents] = useState(null);
+
+	// useEffect(() => {
+	// 	fetch("/api/events")
+	// 		.then(res => res.json)
+	// 		.then(data => console.log(data))
+	// 		// .then(data => setEvents(data));
+	// }, []);
 
 	moment.locale("fr");
 	const { events } = require("../content.json");
 	const viewableEventsAmount = 3;
 	const viewableEvents = events.filter(event => moment().isBefore(moment(event.date)))
-		.sort((eventA, eventB) => moment(eventA.date).isAfter(moment(eventB.date)))
+		.sort((eventA, eventB) => moment(eventA.date).diff(moment(eventB.date)))
 		.slice(0, viewableEventsAmount);
 	const selectedEvent = viewableEvents[selectedEventId];
 	
@@ -29,17 +37,23 @@ export const Upcoming = () => {
 			<div id="upcoming-container">
 				<div id="upcoming-dates">
 					{
-						viewableEvents.map((event, index) => {
-							return (
-								<div key={`event${index}`} id={`event${index}date`} className={`upcoming-date ${index === selectedEventId ? "active" : ""} ${index + 1 === selectedEventId ? "roundBottom" : ""} ${index - 1 === selectedEventId ? "roundTop" : ""}`} onClick={() => handleEventClick(index)}>
-									<h3 className="upcoming-event-title">{event.name}</h3>
-									<h3>
-										<span className="day">{convertDateDay(event.date)}</span>
-										<span className="time">{convertDateTime(event.date)}</span>
-									</h3>
+						!events
+							?
+								<div className="upcoming-date">
+									<h3 className="upcoming-event-title">Chargement</h3>
 								</div>
-							);
-						})
+							:
+							viewableEvents.map((event, index) => {
+								return (
+									<div key={`event${index}`} id={`event${index}date`} className={`upcoming-date ${index === selectedEventId ? "active" : ""} ${index + 1 === selectedEventId ? "roundBottom" : ""} ${index - 1 === selectedEventId ? "roundTop" : ""}`} onClick={() => handleEventClick(index)}>
+										<h3 className="upcoming-event-title">{event.name}</h3>
+										<h3>
+											<span className="day">{convertDateDay(event.date)}</span>
+											<span className="time">{convertDateTime(event.date)}</span>
+										</h3>
+									</div>
+								);
+							})
 					}
 					<NavLink to="/evenements" className={`upcoming-date upcoming-more ${selectedEventId === viewableEventsAmount - 1 ? "roundTop" : ""}`}>
 						<h3>Voir plus d'événements...</h3>

@@ -1,7 +1,6 @@
 @import "./variables";
 
 #upcoming {
-
 	.section-title {
 		font-size: 2rem;
 		margin: 0 0 2rem 0;
@@ -29,7 +28,11 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				background: linear-gradient(to right, $dark 50%, $accent_main 50%);
+				background: linear-gradient(
+					to right,
+					$dark 50%,
+					$accent_main 50%
+				);
 				background-size: 200% 100%;
 				background-position: left bottom;
 				color: $light;
@@ -39,19 +42,19 @@
 					flex-grow: 1;
 					justify-content: flex-start;
 				}
-	
+
 				&:not(.upcoming-filler):hover {
 					background-position: right bottom;
 					color: $dark;
 					cursor: pointer;
 				}
-	
+
 				&.active {
 					background: $accent_main_hover;
 					background-position: right bottom;
 					color: $dark;
 				}
-				
+
 				h3 {
 					margin: 0;
 				}
@@ -62,7 +65,7 @@
 
 				&.upcoming-filler {
 					padding: 0;
-					background-color: $dark;
+					background-color: $light;
 				}
 
 				&.roundTop {
@@ -93,6 +96,10 @@
 				p {
 					margin: 1rem 0;
 					font-size: 1.25rem;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
@@ -108,7 +115,11 @@
 				flex-grow: 1;
 
 				.upcoming-date {
-					background: linear-gradient(to left, $dark 50%, $accent_main 50%);
+					background: linear-gradient(
+						to left,
+						$dark 50%,
+						$accent_main 50%
+					);
 					background-size: 200% 100%;
 					background-position: right bottom;
 
@@ -130,7 +141,7 @@
 						border-top-left-radius: $border_radius;
 						border-top-right-radius: 0;
 					}
-	
+
 					&.roundBottom {
 						border-bottom-left-radius: $border_radius;
 						border-bottom-right-radius: 0;
@@ -144,5 +155,4 @@
 			}
 		}
 	}
-	
 }
