@@ -1,0 +1,55 @@
+@import "./variables";
+
+#eventAdd {
+	
+	&-container {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		box-shadow: $element_shadow;
+		border-radius: $border_radius;
+		overflow: hidden;
+
+		#eventAdd-title {
+			width: 0;
+			flex-grow: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $dark;
+			border-right: 0.5rem solid $accent_main_hover;
+
+			h2 {
+				text-transform: uppercase;
+				color: $light;
+				margin: 0;
+				font-size: 3rem;
+				font-style: italic;
+			}
+		}
+
+		#eventAdd-details {
+			width: 0;
+			flex-grow: 3;
+			padding: 2rem;
+
+			form {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 1rem 2rem;
+
+				label {
+					display: flex;
+					align-items: center;
+					font-size: 1.5rem;
+					font-style: italic;
+				}
+
+				& > *:last-child {
+					grid-column: 1 / span 2;
+				}
+			}
+
+		}
+	}
+}

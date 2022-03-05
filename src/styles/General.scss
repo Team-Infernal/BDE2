@@ -51,6 +51,42 @@ body {
 	animation: gradientCycle 10s ease infinite alternate-reverse;
 }
 
+.user-input {
+	font-family: inherit;
+	padding: 1rem;
+	border-radius: $border_radius;
+	border: 2px solid transparent;
+	box-shadow: $element_shadow;
+	transition: border-color 150ms ease;
+
+	&:hover {
+		border-color: $dark;
+	}
+
+	&:focus {
+		border-color: $accent_main;
+		outline: none;
+	}
+
+	&[type=text] {
+	}
+
+	&[type=textarea] {
+	}
+
+	&[type=datetime-local] {
+	}
+	
+	&[type=submit] {
+		background-color: $accent_main;
+
+		&:hover {
+			border-color: transparent;
+			background-color: $accent_main_hover;
+		}
+	}
+}
+
 @keyframes gradientCycle {
 	from {
 		background-position: bottom left;
