@@ -1,6 +1,7 @@
 @import "./colours";
 
 $dark: #1d1e22;
+$dark_hover: lighten($dark, 10%);
 $light: #ffffff;
 $light_hover: darken($light, 10%);
 

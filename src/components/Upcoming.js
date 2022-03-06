@@ -16,8 +16,8 @@ export const Upcoming = () => {
 			.then(res => res.json())
 			.then(data => {
 				const filteredData = data
-					.filter(event => moment().isBefore(moment(event.date)))
-					.sort((eventA, eventB) => moment(eventA.date).diff(moment(eventB.date)))
+					.filter(event => moment().isBefore(moment(event.date.start)))
+					.sort((eventA, eventB) => moment(eventA.date.start).diff(moment(eventB.date.start)))
 					.slice(0, viewableEventsAmount)
 				setEvents(filteredData);
 			})
@@ -27,6 +27,18 @@ export const Upcoming = () => {
 	moment.locale("fr");
 
 	const handleEventClick = (eventId) => setSelectedEventId(eventId);
+
+	const handleSelectAdd = () => {
+		setSelectedEventId(-2);
+	}
+	const handleSelectRemove = () => {
+		setSelectedEventId(-3);
+
+	}
+	const handleSelectEdit = () => {
+		setSelectedEventId(-4);
+
+	}
 
 	const convertDate = (inputDate) => moment(inputDate).format("dddd D MMMM à H:mm");
 	const convertDateDay = (inputDate) => moment(inputDate).format("dddd D MMMM");
@@ -48,28 +60,67 @@ export const Upcoming = () => {
 								>
 									<h3 className="upcoming-event-title">{event.name}</h3>
 									<h3>
-										<span className="day">{convertDateDay(event.date)}</span>
-										<span className="time">{convertDateTime(event.date)}</span>
+										<span className="day">{convertDateDay(event.date.start)}</span>
+										<span className="time">{convertDateTime(event.date.start)}</span>
 									</h3>
 								</div>
 							);
 						})
 					}
-					<NavLink to="/evenements" className={`upcoming-date upcoming-more ${selectedEventId === viewableEventsAmount - 1 ? "roundTop" : ""}`}>
+					<NavLink to="/evenements" className={`upcoming-date upcoming-more ${selectedEventId === events.length - 1 ? "roundTop" : ""}`}>
 						<h3>Voir plus d'événements...</h3>
 					</NavLink>
+					<div id="upcoming-dates-controls">
+						<i className="fa-solid fa-plus fa-fw accent" onClick={() => handleSelectAdd()}></i>
+						<i className="fa-solid fa-minus fa-fw accent" onClick={() => handleSelectRemove()}></i>
+						<i className="fa-solid fa-pen-to-square fa-fw accent" onClick={() => handleSelectEdit()}></i>
+					</div>
 					<div className="upcoming-date upcoming-filler" />
 				</div>
 				<div id="upcoming-details">
 				{
 					!events || selectedEventId === -1
-					? <>
+					?
+					<>
 						<h2 id="upcoming-details-title"><i className="fa-solid fa-spinner fa-spin-pulse fa-fw accent-dark"></i> Chargement...</h2>
 					</>
-					: <>
+					: selectedEventId === -2
+					?
+					<>
+						<h2 id="upcoming-details-title">Ajouter un événement</h2>
+						<div id="eventAdd-details">
+							<form method="POST" action="/api/events/add">
+								<label htmlFor="eventName">Nom</label>
+								<input className="user-input" type="text" placeholder="Soirée, bowling..." name="eventName" required/>
+								<label htmlFor="eventDates">Date & Heure</label>
+								<div id="eventAdd-date-inputs" name="eventDates">
+									<div>
+										<label htmlFor="eventDateTimeStart">Début</label>
+										<input className="user-input" type="datetime-local" name="eventDateTimeStart" required/>
+									</div>
+									<div>
+										<label htmlFor="eventDateTimeEnd">Fin</label>
+										<input className="user-input" type="datetime-local" name="eventDateTimeEnd" required/>
+									</div>
+								</div>
+								<label htmlFor="eventDescription">Description</label>
+								<input className="user-input" type="textarea" placeholder="Lorem ipsum..." name="eventDescription" required/>
+								<label htmlFor="eventLocation">Endroit</label>
+								<input className="user-input" type="text" placeholder="Rouen, en ligne..." name="eventLocation" required/>
+								<button className="user-input" type="submit">Ajouter l'événement</button>
+							</form>
+						</div>
+					</>
+					: events.length === 0
+					?
+					<>
+						<h2 id="upcoming-details-title">Pas d'événements prévus</h2>
+					</>
+					:
+					<>
 						<h2 id="upcoming-details-title">{events[selectedEventId].name}</h2>
 						<div id="upcoming-details-full">
-							<p><i className="fa-solid fa-calendar-days fa-fw accent-dark"></i> {convertDate(events[selectedEventId].date)}</p>
+							<p><i className="fa-solid fa-calendar-days fa-fw accent-dark"></i> {convertDate(events[selectedEventId].date.start)}</p>
 							<p><i className="fa-solid fa-location-dot fa-fw accent-dark"></i> {events[selectedEventId].location}</p>
 							<p><i className="fa-solid fa-circle-question fa-fw accent-dark"></i> {events[selectedEventId].description}</p>
 						</div>

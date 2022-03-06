@@ -78,11 +78,13 @@ body {
 	}
 	
 	&[type=submit] {
-		background-color: $accent_main;
-
+		background-color: $accent_main_hover;
+		transition: background-color 100ms ease;
+		
 		&:hover {
 			border-color: transparent;
-			background-color: $accent_main_hover;
+			background-color: $accent_main;
+			cursor: pointer;
 		}
 	}
 }
